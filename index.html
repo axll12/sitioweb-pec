@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO ESCUELA, COMUNIDAD (PEC)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #1d1b1b;
+            animation: cambioFondo 10s infinite alternate;
+            padding-bottom: 50px; 
+        }
+
+        @keyframes cambioFondo {
+            0% { background-color: #f0f8ff; } 
+            25% { background-color: #e6f7f1; } 
+            50% { background-color: #fff0f5; } 
+            75% { background-color: #f7f7f7; } 
+            100% { background-color: #f0f8ff; } 
+        }
+
+        header {
+            background: linear-gradient(90deg, #6f79fd, #c340d4);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #5d54df;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: -100px; 
+            width: 100%;
+            transition: bottom 0.3s ease; 
+        }
+
+        footer.visible {
+            bottom: 0; 
+        }
+
+        .menu {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 250px; 
+            background-color: hsl(276, 75%, 74%);
+            border-radius: 10px;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        .menu a {
+            display: block;
+            padding: 20px;
+            color: rgb(7, 7, 7);
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .menu a:nth-child(1):hover { background-color: #e27114; }
+        .menu a:nth-child(2):hover { background-color: #104055; }
+        .menu a:nth-child(3):hover { background-color: #1e490a; }
+        .menu a:nth-child(4):hover { background-color: #531350; }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px; 
+        }
+
+        .image {
+            width: 250px; 
+        }
+
+        .objective {
+            font-size: 1.5em;
+            color: #333;
+            font-weight: bold;
+            margin-top: 20px;
+            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PROYECTO ESCUELA, COMUNIDAD (PEC)</h1>
+        <nav>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="LOGOPP.png" class="image" alt="LOGO DE PROYECTO PEC">
+        </div>
+
+        <div class="objective">
+            <p><strong>Objetivo del Proyecto:</strong>Fomentar la integración de la comunidad a través de diversas actividades que promuevan el bienestar social, la educación y el apoyo a diferentes sectores vulnerables.</p>
+        </div>
+
+        <video autoplay loop muted>
+            <source src="Intro.mp4" type="video/mp4">
+        </video>
+
+        <section>
+            <h2>Integrantes</h2>
+            <h4>Kenia Guadalupe Ramírez Herrera</h4>
+            <h4>Axel Iván Muñoz Sigala</h4>
+            <h4>Christian Iván Pérez Delgado</h4>
+            <h4>Luna Camila Robles Blas</h4>
+        </section>
+    </div>
+
+    <footer id="footer">
+        <p>© 2024 Proyecto Escuela, Comunidad (PEC).</p>
+    </footer>
+
+    <div class="menu">
+        <a href="lentes.html">LENTES PARA TODOS</a>
+        <a href="ASILO.html">ASILO</a>
+        <a href="TAPAS.HTML">TAPAS</a>
+        <a href="ZOOLOGICO.html">ZOOLOGICO</a>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var footer = document.getElementById('footer');
+            if (window.scrollY > 100) {
+                footer.classList.add('visible');
+            } else {
+                footer.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>

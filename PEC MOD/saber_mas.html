@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SABER MÁS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        section {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        img {
+            width: 400px;
+            height: 450px;
+            cursor: pointer;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        h1 {
+            animation: parpadeo 1s infinite, brillo 1.5s infinite;
+            font-size: 3em;
+        }
+
+        @keyframes parpadeo {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @keyframes brillo {
+            0% { text-shadow: 0 0 5px #c340d4, 0 0 10px #1fbda8; }
+            50% { text-shadow: 0 0 20px #c340d4, 0 0 30px #1fbda8; }
+            100% { text-shadow: 0 0 5px #c340d4, 0 0 10px #1fbda8; }
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <section>
+            <h1>Problemas de visión</h1>
+            <p>Haz clic en las imágenes para alternar entre astigmatismo y miopía</p>
+
+            <div class="image-container">
+                <!-- Imagen 1 -->
+                <img src="a1.jpg" id="imagen1" alt="Astigmatismo" onclick="cambiarImagen1()">
+
+                <!-- Imagen 2 -->
+                <img src="m1.jpg" id="imagen2" alt="Miopía" onclick="cambiarImagen2()">
+            </div>
+
+            <!-- Botón para regresar -->
+            <button class="back-button" onclick="window.history.back()">Regresar</button>
+
+            <script>
+                function cambiarImagen1() {
+                    var imagen1 = document.getElementById("imagen1");
+                    imagen1.classList.add('hidden'); 
+                    
+                    setTimeout(function() { 
+                        if (imagen1.src.includes("a1.jpg")) {
+                            imagen1.src = "a.jpeg";  
+                            imagen1.alt = "Astigmatismo-Miopía";
+                        } else {
+                            imagen1.src = "a1.jpg";   
+                            imagen1.alt = "Astigmatismo";
+                        }
+                        imagen1.classList.remove('hidden'); 
+                    }, 500);
+                }
+
+                function cambiarImagen2() {
+                    var imagen2 = document.getElementById("imagen2");
+                    imagen2.classList.add('hidden'); 
+                    
+                    setTimeout(function() {
+                        if (imagen2.src.includes("m1.jpg")) {
+                            imagen2.src = "m.jpeg";  
+                            imagen2.alt = "Astigmatismo-Miopía";
+                        } else {
+                            imagen2.src = "m1.jpg";   
+                            imagen2.alt = "Miopía";
+                        }
+                        imagen2.classList.remove('hidden'); 
+                    }, 500);
+                }
+            </script>
+        </section>
+    </center>
+</body>
+</html>

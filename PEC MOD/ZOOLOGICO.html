@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZOOLOGICO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(252, 250, 251);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #e964c1, #2ec4b7);
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .logo-container {
+            margin: 30px 0; 
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin: 20px 0; 
+        }
+
+        .image {
+            width: 350px;
+            transition: opacity 0.3s ease;
+            cursor: pointer; 
+        }
+
+        .arrow-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .arrow-button:hover {
+            background-color: #ddd;
+        }
+
+        .left-arrow {
+            left: -40px; 
+        }
+
+        .right-arrow {
+            right: -40px; 
+        }
+
+        .objective {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333; 
+        }
+
+        h1 {
+            font-size: 3em;
+            animation: parpadeo 1s infinite, brillo 1.5s infinite;
+        }
+
+        h2.subtitle {
+            font-size: 2em;
+            margin-top: -10px;
+            color: #2ec4b7;
+        }
+
+        @keyframes parpadeo {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @keyframes brillo {
+            0% { text-shadow: 0 0 5px #58cf34, 0 0 10px #0f3a09; }
+            50% { text-shadow: 0 0 20px #0f691b, 0 0 30px #064b1d; }
+            100% { text-shadow: 0 0 5px #4e9731, 0 0 10px #0a5210; }
+        }
+
+        .ad-left, .ad-right {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100px;
+            cursor: pointer;
+        }
+        
+        .ad-left {
+            left: 10px;
+        }
+        
+        .ad-right {
+            right: 10px;
+        }
+
+        .btn-involucrados, .btn-purpose {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #2ec4b7;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-involucrados:hover, .btn-purpose:hover {
+            background-color: #1a8a82;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ZOOLOGICO</h1>
+        <h2 class="subtitle">Mi relación con el mundo y la sociedad</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <center><p style="color: #333;">PASOS A SEGUIR</p></center>
+    
+    <div class="container">
+        <div class="logo-container">
+            <img src="logoz.PNG" alt="LOGO DE PROYECTO PEC" style="width: 200px;"> 
+        </div>
+
+        <div class="objective">
+            <p>Ejecución del fortalecimiento del compromiso ambiental de cada persona, a través del conocimiento del papel de los zoológicos en la conservación ...</p> 
+        </div>
+        <center><video autoplay loop muted>
+            <source src="vidzoo.mp4" type="video/mp4">
+        </video></center>
+
+        <div>
+            <img src="zoo1.jpeg" alt="Imagen 1" width="300">
+            <img src="zoo2.jpeg" alt="Imagen 2" width="300">
+            <img src="zoo3.jpeg" alt="Imagen 3" width="300">
+            <img src="zoo4.jpeg" alt="Imagen 4" width="300">
+            <img src="zoo5.jpeg" alt="Imagen 5" width="300">
+            <img src="zoo6.jpeg" alt="Imagen 6" width="300">
+            <img src="zoo7.jpeg" alt="Imagen 7" width="300">
+            <img src="zoo8.jpeg" alt="Imagen 8" width="300">
+            <img src="zoo9.jpeg" alt="Imagen 9" width="300">
+            <img src="zoo10.jpeg" alt="Imagen 10" width="300">
+        </div>
+        <section>
+            <h2>Proyecto: ZOOLOGICO</h2>
+            <p>Docentes que participan: ...</p>
+            <a href="Prof.html" class="btn-involucrados" target="_blank">INVOLUCRADOS</a>
+        </section>
+
+        <button class="btn-purpose" onclick="window.open('objetivo.html', '_blank')">Propósito del viaje</button>
+    </div>
+
+    <script>
+        const images = [
+            'imagen1.jpg', 
+            'imagen2.jpg',
+            'imagen3.jpg',
+            'imagen4.jpg',
+            'imagen5.jpg',
+        ];
+
+        const imageElement = document.querySelector('.image');
+        let currentIndex = 0;
+
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            imageElement.src = images[currentIndex];
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            imageElement.src = images[currentIndex];
+        });
+    </script>
+
+</body>
+</html>

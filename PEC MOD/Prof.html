@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesores Involucrados</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .credits-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .credits {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .credits-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll-up 15s linear infinite;
+        }
+
+        .credits h2 {
+            font-size: 2em;
+            margin: 10px 0;
+            color: #2ec4b7;
+        }
+
+        .credits ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1.5em;
+            line-height: 2em;
+        }
+
+        @keyframes scroll-up {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(-100%);
+            }
+        }
+
+        .ad-left, .ad-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 150px;
+            height: auto;
+        }
+
+        .ad-left {
+            left: 20px;
+        }
+
+        .ad-right {
+            right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .credits-content {
+                animation: scroll-up 15s linear infinite; 
+            }
+
+            .ad-left, .ad-right {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="credits-container">
+       
+        <img src="anuncio1.png" alt="Anuncio izquierdo" class="ad-left">
+        
+        <div class="credits">
+            <div class="credits-content">
+                <h2>Profesores</h2>
+                <ul>
+                    <li>Juana Ines Flores López</li>
+                    <li>Nazario Hernández Reyes</li>
+                    <li>Flor Guadalupe Flores Marín</li>
+                    <li>Fernando Delgado Espejo</li>
+                    <li>Salvador Ascencio López</li>
+                    <li>Silvia Márquez Rodríguez</li>
+                    <li>Marcelina García Juárez</li>
+                    <li>María Soledad Salazar Vázquez</li>
+                    <li>Alberto Jorge Rosales Narváez</li>
+                    <li>Edmundo Zacarías Guzmán</li>
+                    <li>Angelica Weeke Zavala</li>
+                    <li>Irma Ofelia Romero Chávez</li>
+                    <li>María Patricia Arellano</li>
+                    <li>Flores Ma. Magdalena Valdivia</li>
+                    <li>Liliana Rivas</li>
+                    <li>Adriana Martínez Esparza</li>
+                    <li>Luz Cecilia Sánchez Zamarripa</li>
+                    <li>Karla Rocío Ramírez Aguilera</li>
+                    <li>Cristina Alejandra Gómez Rangel</li>
+                    <li>Orlando Ramiro Esquivel Arellano</li>
+                    <li>Pedro Antonio Álvarez Flores</li>
+                    <li>Ana Laura Carranza Marco</li>
+                    <li>Antonio Rodríguez Esquivel</li>
+                    <li>Mayela Valdez</li>
+                    <li>David Gerardo Arceo Arce</li>
+                    <li>Directivos Administrativos de Vinculación Enfermeros</li>
+                </ul>
+                <h2>Materias</h2>
+                <ul>
+                    <li>Biología</li>
+                    <li>Química</li>
+                    <li>Física</li>
+                    <li>Matemáticas</li>
+                    <li>Geografía</li>
+                    <li>Historia</li>
+                    <li>Lengua y Literatura</li>
+                    <li>Educación Física</li>
+                    <li>Arte</li>
+                    <li>Filosofía</li>
+                </ul>
+            </div>
+        </div>
+
+        <img src="anuncio2.jpg" alt="Anuncio derecho" class="ad-right">
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASILO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(247, 243, 245);
+            color: #080808;
+        }
+
+        header {
+            background: linear-gradient(90deg, #f1d2a2, #cf0505);
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #f8cca3;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 30px; 
+        }
+
+        .image {
+            width: 200px; 
+            transition: opacity 0.3s ease;
+            cursor: pointer; 
+            display: block; 
+            margin: 0 auto; 
+        }
+
+        .objective {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .carousel {
+            margin-top: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel img {
+            width: 100%; 
+            max-width: 250px; 
+            display: none; 
+            transition: opacity 0.5s ease; 
+        }
+
+        .carousel img.active {
+            display: block; 
+            opacity: 1;
+        }
+
+        .carousel button {
+            background-color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            z-index: 1; 
+        }
+
+        .carousel button:hover {
+            background-color: #ddd;
+        }
+
+        .carousel .prev {
+            margin-right: 10px; 
+        }
+
+        .carousel .next {
+            margin-left: 10px; 
+        }
+
+        h1 {
+            font-size: 3em;
+            animation: parpadeo 1s infinite, brillo 1.5s infinite;
+        }
+
+        .steps-title {
+            color: black; 
+            margin-top: 20px; 
+            font-size: 1.5em; 
+        }
+
+        @keyframes parpadeo {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @keyframes brillo {
+            0% { text-shadow: 0 0 5px #f780c1, 0 0 10px #d4626be7; }
+            50% { text-shadow: 0 0 20px #f780c1, 0 0 30px #d4626be7; }
+            100% { text-shadow: 0 0 5px #f780c1, 0 0 10px #d4626be7; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ASILO PARA PERSONAS DE LA 3RA EDAD</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="image-container">
+            <img src="logoa.png" class="image" alt="LOGO DE PROYECTO PEC">
+            <button class="back-button" onclick="window.history.back()">Atrás</button>
+        </div>
+        <section>
+            <h2>Proyecto: Asilo para personas de la tercera edad</h2>
+            <p class="objective">Objetivo del proyecto: Fomentar en nuestros estudiantes la conciencia social y sensibilización sobre el cuidado del adulto mayor en su comunidad.</p>
+        </section>
+
+        
+        <p class="steps-title">PASOS A SEGUIR</p>
+        
+       
+        <div class="carousel">
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <img src="1.JPEG" class="active" alt="Imagen 1">
+            <img src="2.JPEG" alt="Imagen 2">
+            <img src="3.JPEG" alt="Imagen 3">
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+
+        <p>Docentes que participan:
+            <br>Gemma Adlemi Morales Villegas</br>
+            <br>J. Antonio Romo Marín</br>
+            <br>David Emmanuel Andrade Torres</br>
+            <br>Silvia Márquez Rodríguez</br>
+            <br>Claudia Elizabeth Martínez Murillo</br>
+            <br>Orlando Ramiro Esquivel Arellano</br>
+            <br>Ana Celia Rodarte Durón</br>
+            <br>Ma. Magdalena Valdivia López</br>
+            <br>María Patricia Arellano Flores</br>
+            <br>María Soledad Salazar Vázquez</br>
+            <br>Juana Inés Flores López</br>
+        </p>
+        <a href="https://ayudaresvivir.org/institucion/hogar-para-abuelitas-y-abuelitos-trinitarios-ac.html" target="_blank">Visita Página sobre asilo</a>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.carousel img');
+        let currentIndex = 0;
+
+        function changeImage(direction) {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

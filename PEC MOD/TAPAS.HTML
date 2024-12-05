@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAPAS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(243, 235, 236);
+            color: #130101;
+        }
+
+        header {
+            background: linear-gradient(90deg, #da7ada, #007bff);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .image-slider {
+            position: relative;
+            margin: 20px auto;
+            max-width: 500px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .image-slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .image-slider img.active {
+            transform: translateX(-100%);
+        }
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 2em;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+            transform: translateY(-50%);
+            z-index: 2;
+            border-radius: 50%;
+        }
+
+        .slider-arrow.left {
+            left: 10px;
+        }
+
+        .slider-arrow.right {
+            right: 10px;
+        }
+
+        .ad-left, .ad-right {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 200px; /* Tamaño aumentado */
+            height: auto;
+            max-height: 80%; /* Limitar altura al 80% de la pantalla */
+            cursor: pointer;
+        }
+
+        .ad-left {
+            left: 10px;
+        }
+
+        .ad-right {
+            right: 10px;
+        }
+
+        .buttons-container {
+            margin-top: 30px;
+        }
+
+        .involucrados-button, .fases-button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #2ec4b7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .involucrados-button:hover, .fases-button:hover {
+            background-color: #1b9a8d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TAPITAS</h1>
+        <div class="logo-container">
+            <img src="LOGOTAPAS.png" alt="LOGO DE PROYECTO PEC" style="width: 100px;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <p class="steps-title">PASOS A SEGUIR</p>
+        <div class="image-slider">
+            <div class="slider-arrow left" onclick="prevImage()">&#9664;</div>
+            <div class="slider-arrow right" onclick="nextImage()">&#9654;</div>
+            <img src="tapas1.jpeg" class="active" alt="Imagen 1">
+            <img src="tapas2.jpeg" alt="Imagen 2">
+            <img src="tapas3.jpeg" alt="Imagen 3">
+            <img src="tapas4.jpeg" alt="Imagen 4">
+            <img src="tapas5.jpeg" alt="Imagen 5">
+        </div>
+
+        <section>
+            <h2>Proyecto: TAPAS</h2>
+            <p class="objective">Objetivo del proyecto: El objetivo de este proyecto es recolectar tapas de botella, con el fin de venderlas y que el capital recaudado sea donado a una asociación que ayuda a personas con cáncer mediante tratamientos.</p>
+            <a href="https://www.bancodetapitas.org/empresas" target="_blank">Visita Banco de Tapitas</a>
+        </section>
+
+        <div class="buttons-container">
+            <a href="Prof2.html" class="involucrados-button">INVOLUCRADOS</a>
+            <a href="fases.html" class="fases-button">FASES</a>
+        </div>
+    </div>
+
+
+    <script>
+        const images = document.querySelectorAll('.image-slider img');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.remove('active');
+                if (i === index) {
+                    img.classList.add('active');
+                }
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+    </script>
+</body>
+</html>

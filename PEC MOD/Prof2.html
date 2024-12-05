@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesores Involucrados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+            color: #2ec4b7;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.2em;
+        }
+
+        li {
+            margin: 10px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        li:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+        
+        li:nth-child(odd) {
+            animation-delay: 0.4s;
+        }
+
+        .ad-left, .ad-right {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100px;
+            cursor: pointer;
+        }
+        
+        .ad-left {
+            left: 10px;
+        }
+        
+        .ad-right {
+            right: 10px;
+        }
+
+        
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2ec4b7;
+            color: white;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #1b9a8d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Profesores Involucrados</h1>
+    
+    <ul>
+        <li>Juana Ines Flores López</li>
+        <li>Nazario Hernández Reyes</li>
+        <li>Flor Guadalupe Flores Marín</li>
+        <li>Fernando Delgado Espejo</li>
+        <li>Salvador Ascencio López</li>
+        <li>Silvia Márquez Rodríguez</li>
+        <li>Marcelina García Juárez</li>
+        <li>María Soledad Salazar Vázquez</li>
+        <li>Alberto Jorge Rosales Narváez</li>
+        <li>Edmundo Zacarías Guzmán</li>
+        <li>Angelica Weeke Zavala</li>
+        <li>Irma Ofelia Romero Chávez</li>
+        <li>María Patricia Arellano</li>
+        <li>Flores Ma. Magdalena Valdivia</li>
+        <li>Liliana Rivas</li>
+        <li>Adriana Martínez Esparza</li>
+        <li>Luz Cecilia Sánchez Zamarripa</li>
+        <li>Karla Rocío Ramírez Aguilera</li>
+        <li>Cristina Alejandra Gómez Rangel</li>
+        <li>Orlando Ramiro Esquivel Arellano</li>
+        <li>Pedro Antonio Álvarez Flores</li>
+        <li>Ana Laura Carranza Marco</li>
+        <li>Antonio Rodríguez Esquivel</li>
+        <li>Mayela Valdez</li>
+        <li>David Gerardo Arceo Arce</li>
+        <li>Directivos Administrativos de Vinculación Enfermeros</li>
+    </ul>
+
+    
+    <img src="anuncio1.png" alt="Anuncio izquierdo" class="ad-left">
+    <img src="anuncio2.jpg" alt="Anuncio derecho" class="ad-right">
+
+   
+    <a href="TAPAS.html" class="back-button">Regresar</a>
+</body>
+</html>
